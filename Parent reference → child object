@@ -1,0 +1,16 @@
+class A {
+    void show() {
+        System.out.println("Hello from A");
+    }
+}
+
+class B extends A {
+    void show() {
+        System.out.println("Hello from B");
+    }
+
+    public static void main(String[] args) {
+        A a = new B();   // upcasting
+        a.show();
+    }
+}
