@@ -1,0 +1,36 @@
+public class test5 {
+
+    static class A {
+        void show() {
+            System.out.println("Hello from A");
+        }
+    }
+
+    static class B extends A {
+        void show() {
+            System.out.println("Hello from B");
+        }
+    }
+
+    static class C extends A {
+        void show() {
+            System.out.println("Hello from C");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        A a1;
+        B b1 = new B();
+
+        a1 = b1;     // upcasting
+        a1.show();   // Hello from B
+        b1.show();   // Hello from B
+
+        C c1 = new C();
+        c1.show();   // Hello from C
+
+        a1 = c1;     // upcasting
+        a1.show();   // Hello from C
+    }
+}
