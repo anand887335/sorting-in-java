@@ -1,0 +1,24 @@
+public class test4 {
+
+    static class A {
+        void show() {
+            int x = 10;
+            System.out.println("Hello from class A " + x);
+        }
+    }
+
+    static class B extends A {
+        void show() {
+            System.out.println("Hello from Class B");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        A a1 = new A();   // ✅ no obj needed
+        B b1 = new B();   // ✅ no obj needed
+
+        b1.show();        // Class B
+        a1.show();        // Class A
+    }
+}
