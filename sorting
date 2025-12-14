@@ -1,0 +1,27 @@
+public class Test4strSorting {
+    public static void main(String[] args) {
+        String str[] = {"aaba", "aaca", "aaa", "abba", "acaa", "abca"};
+        String temp;
+
+        System.out.println("Before Sorting:");
+        for (String s : str) {
+            System.out.println(s);
+        }
+
+        
+        for(int i = 0; i < str.length - 1; i++) {
+            for(int j = i + 1; j < str.length; j++) {
+                if (str[i].compareTo(str[j]) > 0) {    // we canoot using eqauTo  method because its give only true and fasle 
+                    temp = str[i];                     // not using in sorting 
+                    str[i] = str[j];
+                    str[j] = temp;
+                }
+            }
+        }
+
+        System.out.println("\nAfter Sorting:");
+        for (String s : str) {
+            System.out.println(s);
+        }
+    }
+}
