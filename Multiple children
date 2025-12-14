@@ -1,0 +1,27 @@
+class A {
+    void show() {
+        System.out.println("Hello from A");
+    }
+}
+
+class B extends A {
+    void show() {
+        System.out.println("Hello from B");
+    }
+}
+
+class C extends A {
+    void show() {
+        System.out.println("Hello from C");
+    }
+
+    public static void main(String[] args) {
+        A a;
+
+        a = new B();
+        a.show();
+
+        a = new C();
+        a.show();
+    }
+}
